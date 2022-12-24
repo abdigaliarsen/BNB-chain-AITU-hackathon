@@ -9,9 +9,10 @@ const Request = ({ userInfo, setSubmitted }) => {
         e.preventDefault();
 
         // данные из формочки
+        // + converts to int
         const obj = {
-            amount: e.target.amount.value,
-            salary: e.target.salary.value,
+            amount: +e.target.amount.value,
+            salary: +e.target.salary.value,
         };
 
         console.log(obj);

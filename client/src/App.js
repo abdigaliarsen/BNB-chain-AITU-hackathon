@@ -1,17 +1,14 @@
-import { Button } from "./UI";
-
 import "./global-styles/app.sass";
 
-import { Header, Features, CTA, Meaning, Footer } from "./components";
+import { Routes, Route } from "react-router-dom";
+import { Landing } from "./pages";
 
 function App() {
     return (
         <div className="App">
-            <Header />
-            <Features />
-            <CTA />
-            <Meaning />
-            <Footer />
+            <Routes>
+                <Route path="/" element={<Landing />} />
+            </Routes>
         </div>
     );
 }

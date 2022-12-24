@@ -1,2 +1,4 @@
 import Header from "./Header/Header";
-export { Header };
+import Features from "./Features/Features";
+
+export { Header, Features };

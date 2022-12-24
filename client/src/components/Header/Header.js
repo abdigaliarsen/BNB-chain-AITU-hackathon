@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button } from "../../UI";
 
-import { Files } from "phosphor-react";
+import { Files, PlayCircle } from "phosphor-react";
 
 import "./Header.sass";
 
@@ -21,7 +21,9 @@ const Header = () => {
                 <Button text="Docs">
                     <Files />
                 </Button>
-                <Button text="Demo" />
+                <Button text="Demo">
+                    <PlayCircle />
+                </Button>
             </div>
         </div>
     );

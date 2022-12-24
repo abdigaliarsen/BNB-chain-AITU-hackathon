@@ -1,14 +1,14 @@
-import { Button } from "./UI";
-
 import "./global-styles/app.sass";
 
-import { Header, Features } from "./components";
+import { Routes, Route } from "react-router-dom";
+import { Landing } from "./pages";
 
 function App() {
     return (
         <div className="App">
-            <Header />
-            <Features />
+            <Routes>
+                <Route path="/" element={<Landing />} />
+            </Routes>
         </div>
     );
 }

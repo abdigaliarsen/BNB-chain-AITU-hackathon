@@ -18,9 +18,14 @@ const Header = () => {
             </h3>
 
             <div className="header__button-container">
-                <Button text="Docs">
-                    <Files />
-                </Button>
+                <a
+                    href="https://aday-labs.gitbook.io/mindstream-token/"
+                    style={{ textDecoration: "none" }}
+                >
+                    <Button text="Docs">
+                        <Files />
+                    </Button>
+                </a>
                 <Link to="/demo" style={{ textDecoration: "none" }}>
                     <Button text="Demo">
                         <PlayCircle />

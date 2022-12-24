@@ -1,5 +1,6 @@
 import { Button } from "../../UI";
 import { Files } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 import "./Navbar.sass";
 
@@ -7,7 +8,9 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar__container">
-                <img src="svgs/logo.svg" alt="logo" />
+                <Link to="/" style={{ zIndex: "1000" }}>
+                    <img src="svgs/logo.svg" alt="logo" />
+                </Link>
                 <a
                     href="https://aday-labs.gitbook.io/mindstream-token/"
                     style={{ textDecoration: "none" }}

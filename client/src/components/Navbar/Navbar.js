@@ -13,7 +13,7 @@ const Navbar = () => {
                 </Link>
                 <a
                     href="https://aday-labs.gitbook.io/mindstream-token/"
-                    style={{ textDecoration: "none" }}
+                    style={{ textDecoration: "none", zIndex: "1000" }}
                 >
                     <Button text="Docs">
                         <Files />

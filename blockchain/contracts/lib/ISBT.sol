@@ -26,5 +26,13 @@ interface ISBT {
         external
         returns (bool);
     
-
+    function getSBTData(address _soul)
+        external
+        view
+        returns (
+            uint256[2] memory,
+            uint256[2][2] memory,
+            uint256[2] memory,
+            uint[2] memory
+        );
 }

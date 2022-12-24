@@ -25,7 +25,8 @@ Make a user friendly interface for ZK SBTs, like there is for any other standard
 ## Process
 We found a ZK SBT smart contract at https://github.com/SpartanLabsXyz/zk-sbt. Then we modified it and create an interface for it ISBT.sol.
 
-'// SPDX-License-Identifier: No-License
+```
+// SPDX-License-Identifier: No-License
 pragma solidity ^0.8.0;
 
 
@@ -64,7 +65,7 @@ interface ISBT {
             uint[2] memory
         );
 }
-
+```
 Then we created a documentation on how to use the standard at https://aday-labs.gitbook.io/mindstream-token/. In the end we made a landing page for the project and a 
 small demo Dapp at vercel app url, where we show that our contract really works.
 

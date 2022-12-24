@@ -1,11 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./SignSbt.sass";
 import { Button } from "../../../../UI";
 import { Wallet, At } from "phosphor-react";
 
-const SignSbt = ({ userInfo, setAllowed }) => {
+const SignSbt = ({ userInfo }) => {
+    const navigate = useNavigate();
+
     const handleSubmit = () => {
-        setAllowed(true);
+        navigate("/rejected");
     };
 
     return (

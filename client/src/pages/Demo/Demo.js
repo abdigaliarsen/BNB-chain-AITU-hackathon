@@ -11,7 +11,6 @@ import { Navbar } from "../../components";
 const Demo = () => {
     const [connected, setConnected] = useState(false);
     const [submitted, setSubmitted] = useState(false);
-    const [allowed, setAllowed] = useState(false);
 
     const [userInfo, setUserInfo] = useState(null);
 
@@ -42,20 +41,11 @@ const Demo = () => {
         );
     }
 
-    if (submitted && !allowed) {
-        return (
-            <>
-                <Navbar />
-                <SignSbt userInfo={userInfo} setAllowed={setAllowed} />
-            </>
-        );
-    }
-
     return (
-        <div>
+        <>
             <Navbar />
-            {allowed ? <Approvement /> : <Rejection />}
-        </div>
+            <SignSbt userInfo={userInfo} />
+        </>
     );
 };
 

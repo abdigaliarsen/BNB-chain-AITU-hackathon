@@ -7,6 +7,15 @@ import "./Request.sass";
 const Request = ({ userInfo, setSubmitted }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // данные из формочки
+        const obj = {
+            amount: e.target.amount.value,
+            salary: e.target.salary.value,
+        };
+
+        console.log(obj);
+
         setSubmitted(true);
     };
 
@@ -15,13 +24,13 @@ const Request = ({ userInfo, setSubmitted }) => {
             <div className="request__text">Request loan</div>
 
             <form className="request__form" onSubmit={handleSubmit}>
-                <Input type="text" placeholder="Amount">
+                <Input type="text" placeholder="Amount" name="amount">
                     <Money size={32} />
                 </Input>
 
                 <div style={{ marginBottom: "3.2rem" }}></div>
 
-                <Input type="text" placeholder="Salary">
+                <Input type="text" placeholder="Salary" name="salary">
                     <Coins size={32} />
                 </Input>
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Approvement from "./comp/Approvement";
 import Rejection from "./comp/Rejection";
@@ -9,16 +9,52 @@ import Request from "./comp/Request/Request";
 import { Navbar } from "../../components";
 
 const Demo = () => {
+    const [connected, setConnected] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+    const [allowed, setAllowed] = useState(false);
+
+    const [userInfo, setUserInfo] = useState(null);
+
+    useEffect(() => {
+        const userInfo = JSON.parse(window.localStorage.getItem("userAccount"));
+
+        if (userInfo) {
+            setUserInfo(userInfo);
+            setConnected(true);
+        }
+    }, []);
+
+    if (!connected) {
+        return (
+            <>
+                <Navbar />
+                <Metamask setConnected={setConnected} />;
+            </>
+        );
+    }
+
+    if (!submitted) {
+        return (
+            <>
+                <Navbar />
+                <Request userInfo={userInfo} setSubmitted={setSubmitted} />
+            </>
+        );
+    }
+
+    if (submitted && !allowed) {
+        return (
+            <>
+                <Navbar />
+                <SignSbt userInfo={userInfo} setAllowed={setAllowed} />
+            </>
+        );
+    }
+
     return (
         <div>
             <Navbar />
-
-            <Metamask />
-            <SignSbt />
-            <Request />
-
-            <Approvement />
-            <Rejection />
+            {allowed ? <Approvement /> : <Rejection />}
         </div>
     );
 };

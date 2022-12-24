@@ -9,6 +9,10 @@ interface ISBT {
         uint[2] input;
     }
 
+    event Mint(address _soul);
+    event Burn(address _soul);
+    event Update(address _soul);
+
     function mint(
         uint256[2] memory a,
         uint256[2][2] memory b,

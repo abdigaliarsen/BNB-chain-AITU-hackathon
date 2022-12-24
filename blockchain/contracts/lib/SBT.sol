@@ -39,11 +39,6 @@ contract zkSBT is Ownable, ISBT {
     // Mapping between address and the soul
     mapping(address => Proof) private souls;
 
-    // Events
-    event Mint(address _soul);
-    event Burn(address _soul);
-    event Update(address _soul);
-
     /**
      * @dev This modifier checks that the address passed in is not the zero address.
      */

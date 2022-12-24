@@ -1,0 +1,22 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "BNB-Chain x Astana IT University",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quadropunk/BNB-chain-AITU-hackathon.git"
+  },
+  "author": "quadropunk@adaylabs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quadropunk/BNB-chain-AITU-hackathon/issues"
+  },
+  "homepage": "https://github.com/quadropunk/BNB-chain-AITU-hackathon#readme",
+  "devDependencies": {
+    "hardhat": "^2.12.4"
+  }
+}

@@ -1,2 +1,4 @@
 import Button from "./Button/Button";
-export { Button };
+import HeaderSecond from "./HeaderSecond/HeaderSecond";
+
+export { Button, HeaderSecond };

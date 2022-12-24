@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 import { Button } from "../../UI";
 
@@ -21,9 +21,11 @@ const Header = () => {
                 <Button text="Docs">
                     <Files />
                 </Button>
-                <Button text="Demo">
-                    <PlayCircle />
-                </Button>
+                <Link to="/demo" style={{ textDecoration: "none" }}>
+                    <Button text="Demo">
+                        <PlayCircle />
+                    </Button>
+                </Link>
             </div>
         </div>
     );

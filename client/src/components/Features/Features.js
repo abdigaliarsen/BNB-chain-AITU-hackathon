@@ -30,7 +30,7 @@ const Features = () => {
                         />
                         <FeaturesCard
                             header="User friendly"
-                            text="We have designed our token to be intuitive and easy to use, making it accessible to people of all skill levels. Our platform is constantly updated with new features and improvements to ensure that it remains user friendly."
+                            text="We have designed our token to be intuitive and easy to use, making it accessible to people of all skill levels. Our platform aims to constantly update with new features and improvements to ensure that it remains user friendly."
                         />
                     </div>
                 </div>

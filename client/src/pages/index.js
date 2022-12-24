@@ -1,2 +1,4 @@
 import Landing from "./Landing/Landing";
-export { Landing };
+import Demo from "./Demo/Demo";
+
+export { Landing, Demo };

@@ -6,7 +6,7 @@ interface ISBT {
         uint256[2] a;
         uint256[2][2] b;
         uint256[2] c;
-        uint[2] input;
+        uint256[2] input;
     }
 
     event Mint(address _soul);
@@ -17,7 +17,7 @@ interface ISBT {
         uint256[2] memory a,
         uint256[2][2] memory b,
         uint256[2] memory c,
-        uint[2] memory input
+        uint256[2] memory input
     ) external;
 
     function burn(address _soul) external;
@@ -25,7 +25,7 @@ interface ISBT {
     function updateSBT(address _soul, Proof memory _soulData)
         external
         returns (bool);
-    
+
     function getSBTData(address _soul)
         external
         view
@@ -33,6 +33,22 @@ interface ISBT {
             uint256[2] memory,
             uint256[2][2] memory,
             uint256[2] memory,
-            uint[2] memory
+            uint256[2] memory
         );
+
+    function validateAttribute(address _soul, address verifierAddress)
+        external
+        view
+        returns (bool);
+
+    function totalSBT() external view returns (uint256);
+
+    function hasSoul(address _soul)
+        external
+        view
+        returns (bool);
+    
+    function name() external view returns (string memory);
+
+    function symbol() external view returns (string memory);
 }

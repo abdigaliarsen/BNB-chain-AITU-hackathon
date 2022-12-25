@@ -2,7 +2,7 @@
 // SpartanLabs Contracts (SBT)
 // Modified Version of BasicSBT by SpartanLabs @ https://github.com/SpartanLabsXyz/spartanlabs-contracts/blob/main/contracts/SoulBoundToken/BasicSBT.sol
 
-pragma solidity >=0.6.0 <0.9.0;
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./ISBT.sol";
@@ -79,7 +79,7 @@ contract zkSBT is Ownable, ISBT {
         uint256[2][2] memory b,
         uint256[2] memory c,
         uint[2] memory input
-    ) external virtual {
+    ) external virtual override {
         _mint(a, b, c, input);
         emit Mint(msg.sender);
     }
@@ -102,6 +102,7 @@ contract zkSBT is Ownable, ISBT {
     function burn(address _soul)
         external
         virtual
+        override
         onlyOwner
         validAddress(_soul)
     {
@@ -117,6 +118,7 @@ contract zkSBT is Ownable, ISBT {
      */
     function updateSBT(address _soul, Proof memory _soulData)
         public
+        override
         validAddress(_soul)
         returns (bool)
     {
@@ -133,6 +135,7 @@ contract zkSBT is Ownable, ISBT {
         public
         view
         virtual
+        override
         validAddress(_soul)
         returns (
             uint256[2] memory,
@@ -162,6 +165,7 @@ contract zkSBT is Ownable, ISBT {
     function validateAttribute(address _soul, address verifierAddress)
         public
         view
+        override
         returns (bool)
     {
         require(hasSoul(_soul), "Soul does not exist");
@@ -180,7 +184,7 @@ contract zkSBT is Ownable, ISBT {
     /**
      * @dev Gets the total count of SBT.
      */
-    function totalSBT() public view virtual returns (uint256) {
+    function totalSBT() public view virtual override returns (uint256) {
         return _totalSBT;
     }
 
@@ -218,6 +222,7 @@ contract zkSBT is Ownable, ISBT {
         public
         view
         virtual
+        override
         validAddress(_soul)
         returns (bool)
     {
@@ -228,14 +233,14 @@ contract zkSBT is Ownable, ISBT {
     /**
      * @dev Returns the name of SBT.
      */
-    function name() public view returns (string memory) {
+    function name() public view override returns (string memory) {
         return _name;
     }
 
     /**
      * @dev Returns the symbol ticker of SBT.
      */
-    function symbol() public view returns (string memory) {
+    function symbol() public view override returns (string memory) {
         return _symbol;
     }
 }

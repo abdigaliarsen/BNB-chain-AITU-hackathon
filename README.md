@@ -1,3 +1,6 @@
+SBT address: 0x4374633438945121723EB4B6a3805dE99cc59917
+Verifier address: 0xa2A209fF3f063b5a5002b959e13Edb69fB027d33
+
 # MindStream Token
 ## Extension for Zero Knowledge SoulBound Tokens (ZK SBT)
 ## How does ZK SBT work

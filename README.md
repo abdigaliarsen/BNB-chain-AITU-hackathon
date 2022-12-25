@@ -1,5 +1,20 @@
 SBT address: 0x4374633438945121723EB4B6a3805dE99cc59917
+
+Successfully submitted source code for contract
+contracts/MindStreamToken.sol:MindStreamToken at 0x4374633438945121723EB4B6a3805dE99cc59917
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract MindStreamToken on Etherscan.
+https://testnet.bscscan.com/address/0x4374633438945121723EB4B6a3805dE99cc59917#code
+
 Verifier address: 0xa2A209fF3f063b5a5002b959e13Edb69fB027d33
+
+Successfully submitted source code for contract
+contracts/lib/Verifier.sol:Verifier at 0xa2A209fF3f063b5a5002b959e13Edb69fB027d33
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract Verifier on Etherscan.
+https://testnet.bscscan.com/address/0xa2A209fF3f063b5a5002b959e13Edb69fB027d33#code
 
 # MindStream Token
 ## Extension for Zero Knowledge SoulBound Tokens (ZK SBT)

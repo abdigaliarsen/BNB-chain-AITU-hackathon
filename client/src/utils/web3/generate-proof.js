@@ -1,5 +1,5 @@
 const snarkjs = require('snarkjs');
-const wc = require("./witness_calculator.js");
+const ln = require("./loan");
 
 export default async function generateProof(claim, signature, wasm_buff, zkey_buff) {
 
@@ -28,7 +28,7 @@ export default async function generateProof(claim, signature, wasm_buff, zkey_bu
         "value": value
     }
 
-    let loan = await wc(wasm_buff);
+    let loan = await ln(wasm_buff);
     let wtns_buff = await loan.makeLoanWTNSBin(input, 0);
 
     const { proof, publicSignals } = await snarkjs.groth16.prove(zkey_buff, wtns_buff);
